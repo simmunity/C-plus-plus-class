@@ -6,6 +6,6 @@ Testing repl.in inline C/C++ playgrounds
 
 Hello world
 
-![CPU Image](CLP1/CPU_image.png)
+![CPU Image](images/CPU_image.png)
 
 Hello world
