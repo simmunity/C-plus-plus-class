@@ -1,5 +1,7 @@
 #C / C++ Programming Class
+
 ## Course Schedule
+
 **Course Dates:** Someday, Month 01 – Someday, Month 02, year (# weeks)
 
 **Class Times:** Tuesday, Thursday #–#pm (14 class sessions)
