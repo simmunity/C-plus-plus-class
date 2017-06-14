@@ -91,6 +91,7 @@ x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 ### Functions, Blocks and Parenthesis
 ### Arithmetic and Logical Operators
 ### Bitwise Logical Operators
+### Operator Precedence Rules
 ### Arrays
 ### Multidimensional Arrays
 ---
