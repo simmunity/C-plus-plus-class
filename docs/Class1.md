@@ -72,6 +72,7 @@ x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 # Boolean Logic Gates
 ![](images/BooleanLogicGates.png)
 ![](images/BooleanLogicGates2.png)
+
 ---
 # Adding Two Bits
 ![](images/AddingTwoBits.png)
@@ -81,6 +82,7 @@ x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 ![](images/RippleCarryAdder.png)
 # Four Bit ALU
 ![](images/FourBitALU.png)
+
 ---
 ### 5 Minute Break
 ---
