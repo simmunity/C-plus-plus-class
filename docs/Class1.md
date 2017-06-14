@@ -11,10 +11,10 @@
 ### Microarchitecture – how an instruction set is implemented on a CPU (in digital circuitry)
 ---
 # CPU Components
-  (Clock – sets pace of execution with circuit voltages
+### Clock – sets pace of execution with circuit voltages
 ### Registers – memory cells with data to be manipulated
 ### Datapath – executes operations on data in registers
-### Control unit – decodes instructions into opcode + operands
+### Control unit* – decodes instructions into opcode + operands
 #### * may decompose complex operations into simpler ones according to microprograms)
 
 ---
@@ -132,7 +132,7 @@ bool Scan (char text[], char key[] ) { ; }
 # Arithmetic Operators
 ### C language includes all common math operations on all intrinsic data types:
 ```c
- + - * / %   (add, subtract, multiply, divide and mod)
+ + - * / %   (add, subtract, multiply, divide and modulo)
 ```
 and advanced math such as sin, cosine, exponents, square root and others through math library functions:
 
@@ -170,19 +170,19 @@ Lets try this in Xcode
 
 ---
 # Precedence Rules
-### C/C++ language includes mathematical precedence rules.  Use them with care and most software engineers use explicit parenthesis to make code more maintainable and clear to all readers.
+### C/C++ language includes mathematical precedence rules.  Use them with care.  Most software engineers use explicit parenthesis to make code more maintainable and clear to all readers.
 ![](images/PrecedenceRules.png)
 
 ---
 # Arrays
 ### C language supports extensive array capability:
 ```c
-int Items[]={5, 3, 11};  (a 3 element array of ints)
+int Items[] = {5, 3, 11};  (a 3 element array of ints)
 ```
 ### It is not required to specify the number of elements in brackets but this is often done to ensure correctness:
 ```c
 #define NUM_ELEMENTS 3
-int Items[NUM_ELEMENTS]={5, 3, 11};
+int Items[NUM_ELEMENTS] = {5, 3, 11};
 ```
 Lets try this in Xcode  (notice warnings if more or less elements)
 
@@ -193,7 +193,7 @@ Lets try this in Xcode  (notice warnings if more or less elements)
 #define GROUPS 2
 #define NUM_ELEMENTS 3
 
-int Items[GROUPS][NUM_ELEMENTS]=
+int Items[GROUPS] [NUM_ELEMENTS] =
 { {5,  3, 11},
   {99, 7, 45} };
 printf(”# at 2,3 = %d\n”, Items[1] [2] );
