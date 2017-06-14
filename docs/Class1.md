@@ -5,11 +5,11 @@
 - **Arithmetic Logic Units**
 - **C Language Fundamental Features**
 
---
+---
 # CPU Architecture
 ### Instruction set – what a CPU is capable of doing (in machine code or assembly)
-###Microarchitecture – how an instruction set is implemented on a CPU (in digital circuitry)
---
+### Microarchitecture – how an instruction set is implemented on a CPU (in digital circuitry)
+---
 # CPU Components
   (Clock – sets pace of execution with circuit voltages
 ### Registers – memory cells with data to be manipulated
@@ -17,35 +17,35 @@
 ### Control unit – decodes instructions into opcode + operands
 #### * may decompose complex operations into simpler ones according to microprograms)
 
---
+---
 # CPU Organization
 ![CPU Image](images/CPU_image.png)
 ### Abstract (simplified) model of a CPU
---
+---
 # CPU Operation Loop
 ### Fetch instruction from memory (or cache)
 ### Decode instruction into opcode + operands (may require fetching data from memory)
 ### Execute instruction on data in registers (results stored in registers and/or memory)
---
+---
 # CPU Instructions
 ### Instructions written in machine code – 0s and 1s
 ### Single word (typically 32 or 64 bits) encodes:
 ### Opcode – specifies operation to execute
 ### Operands – data to execute operation on may be value, register, or memory address
---
+---
 # CPU Instruction Types
 ### Arithmetic – add, subtract, multiply, divide
 ### Logical – and, or, invert (bitwise); shift, rotate
 ### Branch – conditional (if-then-else), loop, function
 ### Memory – load (read), store (write)
 ### Complex instructions are written as microprograms of other instructions (e.g., multiply = shifts + adds)
---
+---
 # CPU Instruction Sets
 ### Complex instruction set computing (CISC) – each instruction can execute several operations
 #### Intel (Pentium, Core), AMD (Athlon, Phenom)
 ### Reduced instruction set computing (RISC) – fewer instructions; can be higher performance
 #### ARM (mobile), MIPS, SPARC (supercomputers)
---
+---
 # Addressing Modes
 ### Direct – operand specifies register containing data
 ```c
@@ -63,16 +63,16 @@ value = a[i];   // load memory address a + i, store in reg. 1
 ```c
 x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 ```
---
+---
 # CPU Datapath
 ### Functional blocks made of Boolean logic gates – hardware circuits that propagate high/low voltage
 ### Arithmetic logic unit (ALU) – performs actual arithmetic calculations, bitwise logic, and bit shifts
 ### I/O registers – store current instruction, address of next instruction, and address to load/store data
---
+---
 # Boolean Logic Gates
 ![](images/BooleanLogicGates.png)
 ![](images/BooleanLogicGates2.png)
---
+---
 # Adding Two Bits
 ![](images/AddingTwoBits.png)
 # Adding More Bits
@@ -81,9 +81,9 @@ x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 ![](images/RippleCarryAdder.png)
 # Four Bit ALU
 ![](images/FourBitALU.png)
---
+---
 ### 5 Minute Break
---
+---
 # C Language Fundamental Functionality and Features
 ### Variables, Types and Defines
 ### Functions, Blocks and Parenthesis
@@ -91,7 +91,7 @@ x = x + 5;   // load x into reg. 1, add reg. 1 to 5, store in reg. 1
 ### Bitwise Logical Operators
 ### Arrays
 ### Multidimensional Arrays
---
+---
 # Variables, Types and Defines
 ### Variables must start with a letter and can include underbar and numerals:
 ```c
@@ -114,7 +114,7 @@ void, char, int, long, long long, unsigned char, unsigned int, float, double
 #define HEXADECIMAL    = 0x03FA902B
 #define BINARY         = 0b01011010  // = 0x5A
 ```
---
+---
 # Functions, Blocks and Parenthesis
 ### Functions must start with a letter and can include underbar and numerals.  Functions can return a single result and take multiple parameters of any type:
 ```c
@@ -126,7 +126,7 @@ ComputeAngle, ParseText, ScanString (are much better function names)
 void doSomething (void) { ; }
 bool Scan (char text[], char key[] ) { ; }
 ```
---
+---
 # Arithmetic Operators
 ### C language includes all common math operations on all intrinsic data types:
 ```c
@@ -140,7 +140,7 @@ AngleOfServo = sin( NewAngle );
 
 Lets try this in Xcode
 
---
+---
 # Logical Operators
 ### C language includes all common logical operations on all intrinsic data types:
 ```c
@@ -190,3 +190,4 @@ printf(”# at 2,3 = %d\n”, Items[1] [2] );
 ```
 
 Lets try this in Xcode
+---
