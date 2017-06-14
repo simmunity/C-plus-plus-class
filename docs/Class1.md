@@ -167,6 +167,13 @@ int MyValue = 0b00111110; // 0x3e
 int ShiftAndMask = 0b0111000 & (MyValue << 3);
 ```
 Lets try this in Xcode
+
+---
+# Precedence Rules
+### C/C++ language includes mathematical precedence rules.  Use them with care and most software engineers use explicit parenthesis to make code more maintainable and clear to all readers.
+![](images/PrecedenceRules.png)
+
+---
 # Arrays
 ### C language supports extensive array capability:
 ```c
@@ -178,6 +185,8 @@ int Items[]={5, 3, 11};  (a 3 element array of ints)
 int Items[NUM_ELEMENTS]={5, 3, 11};
 ```
 Lets try this in Xcode  (notice warnings if more or less elements)
+
+---
 # Multi Dimensional Arrays
 ### C language supports multi dimensional array capability:
 ```c
