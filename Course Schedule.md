@@ -1,4 +1,4 @@
-#C / C++ Programming Class
+# C / C++ Programming Class
 
 ## Course Schedule
 
@@ -20,4 +20,3 @@
 ### [Class 12](Class12.md): Porting Space Invaders to Arduino Mega2560 with 320x480 LCD
 ### [Class 13](Class13.md): Final custom project development of classic game
 ### [Class 14](Class14.md): Final project debugging, testing and improvements
-
