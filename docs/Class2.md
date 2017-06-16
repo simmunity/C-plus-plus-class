@@ -1,6 +1,6 @@
 # C / C++ Programming Class 2
 
-[comment]: ### 5 Minute Break
+[]( ### 5 Minute Break)
 
 ---
 # C Language Fundamental Functionality and Features
