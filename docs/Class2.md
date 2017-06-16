@@ -1,7 +1,7 @@
 # C / C++ Programming Class 2
 
----
-### 5 Minute Break
+[comment]: ### 5 Minute Break
+
 ---
 # C Language Fundamental Functionality and Features
 
