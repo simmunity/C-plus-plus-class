@@ -15,7 +15,7 @@
 ---
 # ASCII Strings
 ### Strings in C are stored as arrays of bytes encoded using ASCII or Unicode with a binary zero (NULL) terminator:
-[](```c
+[]() {```c
 main () {
   char rock[] = "C Programmers Rock";  
   printf ("%s\n", rock);
@@ -27,7 +27,7 @@ main () {
   printf ("Last letter   = 0x%02x\n", rock[strlen(rock) - 1] );
   printf ("NULL at end   = 0x%02x\n", rock[strlen(rock)] );
 }
-```)
+```}
 <script src="//repl.it/embed/IpS6/1.js"></script>
 
 ---
