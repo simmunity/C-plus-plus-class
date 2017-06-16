@@ -1,9 +1,11 @@
 # C / C++ Programming Class 1
 
-- **Review of computer architecture**
-- **Central Processing Units**
-- **Arithmetic Logic Units**
-- **C Language Fundamental Features**
+## Objectives
+
+- **Review Von Neumann computer architecture**
+- **Identify and describe components and operation of a CPU (Central Processing Unit)**
+- **Identify and describe components and operation of an ALU (Arithmetic Logic Unit)**
+- **Identify and use C Language Fundamental Features**
 
 ---
 # CPU Architecture
