@@ -1,6 +1,6 @@
 # C / C++ Programming Class 2
 
-[]( ### 5 Minute Break)
+[]( ### 5 Minute Break - testing comment capability)
 
 ---
 # C Language Fundamental Functionality and Features
@@ -65,6 +65,96 @@ main () {
 ```
 <script src="//repl.it/embed/IpUE/1.js"></script>
 
-Lets try this in Xcode
+---
+# Ternary Expressions
+### C provides ternary (three part) expressions that can concisely replace many multi line if, else expressions:
+### value\_assigned = boolean ? value\_if\_true : value\_if\_false;
+```c
+#include <stdbool.h>
+ 
+// only left or right pin can be true for a joystick
+// uses two ternary expressions on one line for conciseness
+void get_angle (bool leftPin, bool rightPin) {
+  int angle = leftPin ? -30 : (rightPin ? 30 : 0);
+  printf ("leftPin = %d, rightPin = %d,", leftPin, rightPin);
+  printf (" angle = %d\n", angle);
+}
+
+main () {
+  get_angle ( false, false );
+  get_angle ( true,  false );
+  get_angle ( false, true  );
+}
+```
+<script src="//repl.it/embed/IuXe/2.js"></script>
 
 ---
+# While Loops
+### C provides convenient looping controlled by conditional:
+### while (condition) { … }  _or_  do { … } while (condition);
+```c
+#include <time.h>
+
+main () {
+time_t oldTime, newTime;
+int count = 0;
+ 
+  time ( &oldTime ); // pass time variables to time function by
+  oldTime += 2;      // reference ‘&’ so they can be modified
+  do {
+    time ( &newTime );
+    count++;
+  }
+  while (oldTime > newTime);
+  printf ("count reached %d in 2 seconds\n", count);
+}
+```
+<script src="//repl.it/embed/IuYV/2.js"></script>
+
+---
+# Switch Statements
+### The switch statement provides a easy way of having various code sections run based on a variables value:
+### switch (value) { case 1: code; case 2: code; default: code}
+```c
+void check (char letter) {
+  switch (letter) {
+    case 'A': printf ("Letter A seen\n");
+      break;
+    case 'B': printf ("Letter B seen\n");
+      break;
+    default: printf ("Bad letter \"%c\" seen\n", letter);
+  }
+}
+
+main () {
+  check ('A');
+  check ('B');
+  check ('Z');
+}
+```
+<script src="//repl.it/embed/IuYt/1.js"></script>
+
+---
+# Goto Statements
+### The goto statement is a much maligned way to cause code execution to jump to a new location in a function:
+### goto lineLable;
+### lineLabel: code;
+```c
+main () {
+  goto firstLabel;
+  printf (“Unreachable code”);
+firstLabel:
+  printf (“Destination first label\n”);
+  goto thirdLabel;
+secondLabel:
+  printf (“Destination second label\n”);
+  goto fourthLabel;
+thirdLabel:
+  printf (“Destination third label\n”);
+  goto secondLabel;
+fourthLabel: ;
+}
+```
+<script src="//repl.it/embed/IuZM/1.js"></script>
+---
+
