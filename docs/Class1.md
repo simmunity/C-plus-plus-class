@@ -142,7 +142,6 @@ and advanced math such as sin, cosine, exponents, square root and others through
 ```c
 AngleOfServo = sin( NewAngle );
 ```
-Lets try this in Xcode
 
 ---
 # Logical Operators
@@ -169,7 +168,7 @@ int NotThisAndThat = ! (This && That);
 int MyValue = 0b00111110; // 0x3e
 int ShiftAndMask = 0b0111000 & (MyValue << 3);
 ```
-Lets try this in Xcode
+<script src="//repl.it/embed/Iujt/3.js"></script>
 
 ---
 # Precedence Rules
@@ -187,7 +186,6 @@ int Items[] = {5, 3, 11};  (a 3 element array of ints)
 #define NUM_ELEMENTS 3
 int Items[NUM_ELEMENTS] = {5, 3, 11};
 ```
-Lets try this in Xcode  (notice warnings if more or less elements)
 
 ---
 # Multi Dimensional Arrays
@@ -201,6 +199,6 @@ int Items[GROUPS] [NUM_ELEMENTS] =
   {99, 7, 45} };
 printf(”# at 2,3 = %d\n”, Items[1] [2] );
 ```
-Lets try this in Xcode
+<script src="//repl.it/embed/IulF/1.js"></script>
 
 ---
