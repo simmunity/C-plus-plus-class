@@ -1,7 +1,5 @@
 # C / C++ Programming Class 2
 
-[]( ### 5 Minute Break - testing comment capability)
-
 ---
 # C Language Fundamental Functionality and Features
 
@@ -158,3 +156,71 @@ fourthLabel: ;
 <script src="//repl.it/embed/IuZM/1.js"></script>
 ---
 
+# How To Setup The Command Line Terminal App
+### Xcode programs can be creted that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.
+
+![](images/TerminalUseInstructions.png)
+
+---
+# Using Standard C Libraries
+### Standard libraries for C are pretty complete and consistent.  On Arduino the standard libraries have omissions and anomalies often introduced to make the code smaller by excluding adanced features.  printf is one such function that has been simplified by Arduino:
+
+### To simplify porting code we write from Xcode to Arduino, the curriculum provides a set of convienent functions in a library called TermAndKey.h and .c that abstract the differences between the two platforms.  These are the function prototypes (definitions):
+```c
+#include <stdio.h>      // to access to stdin, stdout, etc.
+#include <ctype.h>      // used by toupper()
+#include "TermAndKey.h" // our convienence function library
+ 
+uint64_t GetTimeInMillisecondsSinceBoot(void);
+void InitGetch (void);  // Call once to initialize
+int getch(void);
+bool GetLetter (char * pLetter);
+void PositionCursor (int Y, int X);
+void ClearScreen (void);
+```
+### Lets play with these in Xcode.  Launch Xcode, then load CprogrammingPt2 project and configure the terminal as described in the section on setting up the Terminal app.  Enable the STANDARD\_LIBRARIES section using code in the Extra.c file (change to conditional code sections with seperate files for each exercise).
+ 
+---
+# How To Run and Debug Programs
+### When Xcode is configured to produce a command line application and the Terminal app is setup and your program compiles, you can set breakpoints and run the program.  The debugger will pause the program execution so you can inspect variables and other program state.
+### [ [ [ put video or series of screen grabs at least ] ] ]
+
+---
+# Make A Navigateable Smily Character Program
+### The MAKE NAVIGABLE SMILY CHARACTER section of Extra.c provides a starting point to exercise the #include "TermAndKey.h" library and explore the terminal applications keyboard input and display capabilities for use in small games.
+### Lets play with these in Xcode  (use CProgrammingPt2 project)
+### In the project, open the Extra.c file and grab the MAKE NAVIGATABLE SMILY CHARACTER section.### The example code uses the three C constructs we've recently explored to allow you to move a icon around the screen inside the Terminal application using the WASD key navigation convention.
+```c
+ do { … } while;
+ switch (value) { case 1: ; case 2: ; default: ;}
+ ternary_result = (ternary_condition > 1) ? value1 : value2;
+```
+### Lets set breakpoints on cases and then change their behavior by modifying the code.
+
+---
+# Snake Game Variations
+### Creating small games in C is a way use many language features in meaningful ways:
+### The SNAKE GAME VARIATIONS section of Extra.c provides a starting point to explore making small games that are suitable for running in the Terminal application.  I had a wonderful time playing Rogue and Hack character graphic dungeon games and making many animated games such as Space Invaders using just character graphics.
+ 
+### Lets code SNAKE GAME in Xcode  (use CProgrammingPt2 project)
+ 
+### In the project, open the Extra.c file and grab the SNAKE GAME VARIATIONS section
+ 
+### This starter code riffs off the SMILY CHARACTER code and adds elements needed for the popular SNAKE game.  There are over ten base challenges to complete and a stretch challenges that each student should complete independently.  Challenges include increasing difficulty, various obstacles and enemies, an AI snake opponent and more.  Have fun.
+
+---
+# Snake Game Challenges
+### Completing challenges is a great way to iterate on the Snake Game and deepen coding experience and debugging skills
+### SNAKE GAME Challenges:
+- Challenge 1, Change the game so the snake head moves based on a fixed timer
+-  Challenge 2, Make the snake head move faster as the game progresses
+- Challenge 3, Provide a game score counter start count down and game
+- Challenge 4, Add 20 segment long tail length limit to snake
+- Challenge 5, Make snake tail grows longer to a maximum of 200 segments
+- Challenge 6, Add a randomly located mouse (food) for the snake to eat and when the snake tail grows longer
+- Challenge 7, Make the dying snake head explode and body catch fire from head to tip of tail in a two second long animation
+- Optional Challenge 8, Add obstacles at start and then add more as game progresses
+- Optional Challenge 9, Make a game configuration console to adjust difficulty and game options
+- Stretch Challenge, Add an AI opponent snake that starts off facing down and competes to eat snake food and attempts to cause user snake to die
+
+---
