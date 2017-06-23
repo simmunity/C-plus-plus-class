@@ -5,7 +5,7 @@
 ## Objectives
 - **Master use of object oriented programming added to C**
 - **Use classes and this**
-- **Use the ew operator**
+- **Use the new operator**
 - **Explore function overloading**
 - **Use encapsulation**
 
