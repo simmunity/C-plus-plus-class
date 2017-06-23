@@ -1,13 +1,13 @@
 # C / C++ Programming Class 5
 
 ---
-### C++ language features add object orientation, greater code modularity and large project scalability to C langauge.
+### C++ language features add object orientation, greater code modularity and large project scalability to C language.
 ## Objectives
-- **Object oriented programming added to C**
-- **Classes and this**
-- **New operator**
-- **Function overloading**
-- **Encapsulation**
+- **Master use of object oriented programming added to C**
+- **Use classes and this**
+- **Use the ew operator**
+- **Explore function overloading**
+- **Use encapsulation**
 
 ---
 # Object Orientation
