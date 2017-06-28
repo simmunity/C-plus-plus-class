@@ -3,13 +3,14 @@
 ---
 # C Language Fundamental Functionality and Features
 
-# Objectives
+## Objectives
 
-### Identify and use essential C language features that provide text and data input, output and processing using iteration
-### Describe differences between and use both ASCII and Unicode character strings
-### Master For loops and conditionals
-### Master While loops and Switch statements
-### Use Standard C Libraries
+- **Identify and use essential C language features that provide text and data input, output and processing using iteration**
+- **Describe differences between and use both ASCII and Unicode character strings**
+- **Master For loops and conditionals**
+- **Master While loops and Switch statements**
+- **Use Standard C Libraries**
+
 ---
 # ASCII Strings
 ### Strings in C are stored as arrays of bytes encoded using ASCII or Unicode with a binary zero (NULL) terminator:
@@ -140,24 +141,31 @@ main () {
 ```c
 main () {
   goto firstLabel;
-  printf (“Unreachable code”);
+  
+  printf ("Unreachable code");
+  
 firstLabel:
-  printf (“Destination first label\n”);
+  printf ("Destination first label\n");
   goto thirdLabel;
+
 secondLabel:
-  printf (“Destination second label\n”);
+  printf ("Destination second label\n");
   goto fourthLabel;
+
 thirdLabel:
-  printf (“Destination third label\n”);
+  printf ("Destination third label\n");
   goto secondLabel;
-fourthLabel: ;
+
+fourthLabel:
+  printf ("Destination fourth label\n");
+  printf ("Last goto reached\n");
 }
 ```
-<script src="//repl.it/embed/IuZM/1.js"></script>
+<script src="//repl.it/embed/IuZM/2.js"></script>
 ---
 
 # How To Setup The Command Line Terminal App
-### Xcode programs can be creted that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.
+### Xcode programs can be created that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.
 
 ![](images/TerminalUseInstructions.png)
 
@@ -167,16 +175,19 @@ fourthLabel: ;
 
 ### To simplify porting code we write from Xcode to Arduino, the curriculum provides a set of convienent functions in a library called TermAndKey.h and .c that abstract the differences between the two platforms.  These are the function prototypes (definitions):
 ```c
-#include <stdio.h>      // to access to stdin, stdout, etc.
-#include <ctype.h>      // used by toupper()
-#include "TermAndKey.h" // our convienence function library
- 
-uint64_t GetTimeInMillisecondsSinceBoot(void);
-void InitGetch (void);  // Call once to initialize
+#include <stdio.h>
+#include <stdbool.h>
+#include <time.h>
+#include <sys/types.h>
+#include <termios.h>
+#include <unistd.h>
+
+void position_cursor (int Y, int X);
+void clear_screen (void);
+void init_getch (void);
 int getch(void);
-bool GetLetter (char * pLetter);
-void PositionCursor (int Y, int X);
-void ClearScreen (void);
+bool get_letter (char * pLetter);
+uint64_t get_time_in_milliseconds_since_boot(void);
 ```
 ### Lets play with these in Xcode.  Launch Xcode, then load CprogrammingPt2 project and configure the terminal as described in the section on setting up the Terminal app.  Enable the STANDARD\_LIBRARIES section using code in the Extra.c file (change to conditional code sections with seperate files for each exercise).
  
@@ -212,15 +223,20 @@ void ClearScreen (void);
 # Snake Game Challenges
 ### Completing challenges is a great way to iterate on the Snake Game and deepen coding experience and debugging skills
 ### SNAKE GAME Challenges:
-- Challenge 1, Change the game so the snake head moves based on a fixed timer
--  Challenge 2, Make the snake head move faster as the game progresses
-- Challenge 3, Provide a game score counter start count down and game
-- Challenge 4, Add 20 segment long tail length limit to snake
-- Challenge 5, Make snake tail grows longer to a maximum of 200 segments
-- Challenge 6, Add a randomly located mouse (food) for the snake to eat and when the snake tail grows longer
-- Challenge 7, Make the dying snake head explode and body catch fire from head to tip of tail in a two second long animation
-- Optional Challenge 8, Add obstacles at start and then add more as game progresses
-- Optional Challenge 9, Make a game configuration console to adjust difficulty and game options
-- Stretch Challenge, Add an AI opponent snake that starts off facing down and competes to eat snake food and attempts to cause user snake to die
+- Challenge 1, Add Bell sound effect at appropriate times using printf ("\a");
+- Challenge 2, Do not exit the application on GAME OVER, ask user, y/n?
+- Challenge 3, Add 20 character long tail length limit to snake
+- Challenge 4, Make snake tail slowly grow longer to a maximum of 200 segments
+- Challenge 5, Add obstacles at start and then add more as game progresses
+- Challenge 6, Change the game so the snake head moves based on a fixed timer
+- Challenge 7, Provide a game start count down and game score counter with high score
+- Challenge 8, Make the snake head move slightly faster as the game progresses
+- Challenge 9, Make the dying snake head explode and body whither away in an animation
+- Challenge 10, Add periodically appearing enemy "bugs" that wander and vanish
+- Challenge 11, Add snake food (mice) adn then grow the snakes length
+- Challenge 12, Make a game configuration console to adjust difficulty and game options
+- Stretch Challenge, Add an AI opponent snake that starts off facing down
+- Extra credit: Break up code into a set of functions
+- Extra credit: Invent new game play dynamics, changing maze obstacles?, smart AI enemies?
 
 ---

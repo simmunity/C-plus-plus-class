@@ -171,7 +171,7 @@ int notThisAndThat = ! (this && that);
 int myValue = 0b00111110;   // 0x3e
 int shiftAndMask = 0b0111000 & (myValue << 3);
 ```
-<script src="//repl.it/embed/Iujt/3.js"></script>
+<script src="//repl.it/embed/Iujt/4.js"></script>
 
 ---
 # Precedence Rules
@@ -202,6 +202,6 @@ int values[GROUPS] [NUM_ELEMENTS] =
   {99, 7, 45} };
 printf(”# at 2,3 = %d\n”, values[1] [2] );
 ```
-<script src="//repl.it/embed/IulF/1.js"></script>
+<script src="//repl.it/embed/IulF/2.js"></script>
 
 ---
