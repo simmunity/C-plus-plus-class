@@ -114,7 +114,6 @@ Other classes mixed in with the classes above:
 - Porting Snake game to Arduino Mega2560 with 320x480 display and custom controller board
 - Porting Space Invaders to Arduino Mega2560 with 320x480 display and custom controller board
 
-
 ## Evaluation methods 
 
 To pass this class:
@@ -127,22 +126,19 @@ To pass this class:
 - Students are incouraged to complete all challenges and stretch challenges<br>
 - Students are incouraged to create a new possibly similar game to Snake or Space Invaders on Arduino hardware
 
-
 ## All Materials 
 
+- C Coding Standards [https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html]()
 - The C Programming Language  [https://en.wikipedia.org/wiki/The_C_Programming_Language]()
 - C++ resource  [https://en.wikibooks.org/wiki/C%2B%2B_Programming]()
 - Online C playground  [https://repl.it/site/languages/c]()
 - Path finding AI algorithms  [https://en.wikipedia.org/wiki/A*_search_algorithm]()
 - Arduino hardware and IDE simulator  [https://circuits.io/]()
 
+### [Index of Classes](ClassIndex.md)
 
-### [Class Index](ClassIndex.md)
-
-Testing repl.in inline C/C++ playgrounds
+A cool web service repl.it provide inline C/C++ playgrounds.  Here is C program that computes prime numbers.
 
 <body>
 <script src="//repl.it/embed/I7dO/1.js"></script>
 </body>
-
-
