@@ -165,15 +165,16 @@ fourthLabel:
 ---
 
 # How To Setup The Command Line Terminal App
-### Xcode programs can be created that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.
+### Xcode programs can be created that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.  The Terminal application is found in the Utilities folder under the Applications folder.
+### Again, it is best to configure the Terminal2 application to use the Menlo 18pt Regular font and normal background and foreground colors for the numerous terminal programs to work properly for the rest of this class.
 
 ![](images/TerminalUseInstructions.png)
 
 ---
 # Using Standard C Libraries
-### Standard libraries for C are pretty complete and consistent.  On Arduino the standard libraries have omissions and anomalies often introduced to make the code smaller by excluding adanced features.  printf is one such function that has been simplified by Arduino:
+### Standard libraries for C are pretty complete and consistent.  On Arduino the standard libraries have some notable omissions and anomalies often introduced to make the code size smaller by excluding adanced features.  printf is one such function that has been simplified by Arduino:
 
-### To simplify porting code we write from Xcode to Arduino, the curriculum provides a set of convienent functions in a library called TermAndKey.h and .c that abstract the differences between the two platforms.  These are the function prototypes (definitions):
+### To simplify porting code we write from Xcode to Arduino, the curriculum provides a set of convienent functions in a library called TermKeyAndTime.h and TermKeyAndTime.c that abstract the differences between the two platforms.  These are the function prototypes (definitions):
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -189,35 +190,40 @@ int getch(void);
 bool get_letter (char * pLetter);
 uint64_t get_time_in_milliseconds_since_boot(void);
 ```
-### Lets play with these in Xcode.  Launch Xcode, then load CprogrammingPt2 project and configure the terminal as described in the section on setting up the Terminal app.  Enable the STANDARD\_LIBRARIES section using code in the Extra.c file (change to conditional code sections with seperate files for each exercise).
- 
+### Lets play with these in Xcode.  Launch Xcode, then load ***cpt1*** project and configure the terminal as described in the section on setting up the Terminal2 app.  Explore the cpt1 Xcode project main.c file and Arithmetic.c, Strings.c and ControlFlow.c files.  Note that main.c includes function calls several additional projects that we'll be exploring shortly. 
 ---
 # How To Run and Debug Programs
-### When Xcode is configured to produce a command line application and the Terminal app is setup and your program compiles, you can set breakpoints and run the program.  The debugger will pause the program execution so you can inspect variables and other program state.
-### [ [ [ put video or series of screen grabs at least ] ] ]
+### When Xcode is configured to produce a command line application and the Terminal2 app is setup to launch and interact with your programs process, you can set breakpoints and single step through the program.  The debugger will pause the program execution so you can inspect variables and other program state.  The blue mark on line 20, is a breakpoint.
+### By pressing the right pointing triangle under the word edit in the menu bar, Xcode will compile and run the program.
+![](images/XcodePart1A.png)
+### Because the program is a command line program and not a GUI OS/X application, we have to help Xcode attach its debugger to the running process, which is paused waiting for the user to press the return key.  So before pressing the return key in the Terminal2 application window that popped up once the program began running, selected the Debug menu, then the submenu item Attach To Process, then selecte the top item which is the running program.  Then press return in the program waiting which is waiting for a user keystroke.
+![](images/XcodePart1B.png)
+### Now that the debugger has paused the program, press the down pointing arrow that points to a horizontal bar in the lower debugger bar section.  This button is the single step command that will step into the arithmetic_logic_arrays function and through the set of program statements.
+![](images/XcodePart1C.png)
+### Notice that as the program executes, the printf statements display their answers in the Terminal2 application window.  Also look at the Xcode area at the left and bottom which has various useful info such as the call stack, and variable values.
+![](images/XcodePart1D.png)
 
 ---
-# Make A Navigateable Smily Character Program
-### The MAKE NAVIGABLE SMILY CHARACTER section of Extra.c provides a starting point to exercise the #include "TermAndKey.h" library and explore the terminal applications keyboard input and display capabilities for use in small games.
-### Lets play with these in Xcode  (use CProgrammingPt2 project)
-### In the project, open the Extra.c file and grab the MAKE NAVIGATABLE SMILY CHARACTER section.### The example code uses the three C constructs we've recently explored to allow you to move a icon around the screen inside the Terminal application using the WASD key navigation convention.
-```c
- do { … } while;
- switch (value) { case 1: ; case 2: ; default: ;}
- ternary_result = (ternary_condition > 1) ? value1 : value2;
-```
-### Lets set breakpoints on cases and then change their behavior by modifying the code.
+# Testing the Terminal, Keyboard and Time Library
+### When writing library code that provides useful abstractions over devices and access to operating system resources, it is always recommended that a test function be provided to validate correctness.  Click on the TermKeyAndTime.c file on the left side with the program in a stopped state.  Examine the functions, their parameters and return values.  Click on the TestTermKeyAndTime.c file and examine the test\_term\_key\_and\_time program.  Discuss what the program does prior to running it with a classmate or if solo, create flow chart on paper showing the calls, loop and conditions.
+### To run the test program, disable the arithmetic\_logic\_arrays(); strings(); and control\_flow(); function calls in main() using the // line comment character pairs and remove the line commment in front of the test\_term\_key\_and\_time(); function call and set a breakpoint on that line and run the program.  Notice how the get_letter() function returns a boolean if there is a character ready or not, and how that is used by the conditional block.  Also notice that the program loops forever updating the time until the user presses the ESC key.
+![](images/TestingTermKeyAndTime.png)
+
+---
+# Making A Navigable Smily Character Program
+### The Smily.c file provides a starting point to further exercise the TermKeyAndTime library and explore the terminal applications keyboard input and display capabilities for use in small character graphic based games.
+### The smily example code expands on the test\_term\_key\_and\_time program and uses the three C constructs we've recently explored to allow you to move a smily face icon around the screen inside the Terminal application using the WASD key navigation convention.
+### As before, comment out the test\_term\_key\_and\_time(); call in main() and uncomment the smily(); function call.  Before running the program, click on the Smily.c file to see the code.  Notice how it is almost identical to the code in test\_term\_key\_and\_time.  Examine the switch statement and the ternary expressions used to keep the smily character from going off the edge of the terminal programs display area.
+### It is best to configure the Terminal2 application to use the Menlo 18pt Regular font and normal background and foreground colors to enjoy the terminal programs in the rest of this class.
+![](images/Smily.png)
 
 ---
 # Snake Game Variations
-### Creating small games in C is a way use many language features in meaningful ways:
-### The SNAKE GAME VARIATIONS section of Extra.c provides a starting point to explore making small games that are suitable for running in the Terminal application.  I had a wonderful time playing Rogue and Hack character graphic dungeon games and making many animated games such as Space Invaders using just character graphics.
- 
-### Lets code SNAKE GAME in Xcode  (use CProgrammingPt2 project)
- 
-### In the project, open the Extra.c file and grab the SNAKE GAME VARIATIONS section
- 
-### This starter code riffs off the SMILY CHARACTER code and adds elements needed for the popular SNAKE game.  There are over ten base challenges to complete and a stretch challenges that each student should complete independently.  Challenges include increasing difficulty, various obstacles and enemies, an AI snake opponent and more.  Have fun.
+### Creating small games in C is a fun and effective way to use many language features in meaningful ways:
+### The Snake.c file provides a starting point to explore making small games that are suitable for running in the Terminal application.  When I began coding in late 1970's, I had a wonderful time creating clones of popular arcade games like Space Invaders, Asteroids and Star Trek on a computer barely better than an Arduino Uno, 8 bit computer.  A few years later I played awesome fun character graphic Rogue and Hack dungeon games on the first generation of PC's.  Games like the smash hit, The Legend Of Zelda on Super Nintendo harken back character graphic based games.
+### This starter code riffs off the Smile.c code and adds elements needed for the popular Snake game. There are over ten base challenges to complete and a stretch challenges. Challenges include increasing difficulty, various obstacles and enemies, an AI snake opponent and more. The code to implement challenge 6 is included in comments at the end of teh Snake.c code.  Instructions on how to patch those changes into the program area included in the Snake.c code.
+### So comment out the smily(); function call in main() and uncomment snake(); and click on the Snake.c file to examine the code.  Notice how similar this is to the Smily.c code.  We will be implementing many challenges and then porting the code onto the Arduino platform using the Arduino IDE and an Arduino Mega2560 board and 320x240 pixel RGB display so get familiar with the code, we are going to use it to learn a lot about coding in C.
+![](images/Snake_V1_0.png)
 
 ---
 # Snake Game Challenges
