@@ -41,8 +41,6 @@ void smily (void) {
                 default: ;
             }
             position_cursor (y, x);
-//            printf ("X");
-//            printf ("%c", letter);
             printf ("%s", SMILY_CHARACTER); // Menlo 18pt Regular works well
         }
         timeMillis = get_time_in_milliseconds_since_boot();
@@ -50,5 +48,4 @@ void smily (void) {
         printf ("y = %d, x = %d, time = %llu  ", y, x, timeMillis);
         fflush (stdout);
     } while (letter != '\033'); // esc key
-
 }

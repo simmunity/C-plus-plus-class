@@ -26,11 +26,11 @@ int main(int argc, const char * argv[]) {
     printf ("Press return to continue\n");
     getchar ();
 
-    test_term_key_and_time ();
+//    test_term_key_and_time ();
 
-    smily ();
+//    smily ();
 
-    snake ();
+//    snake ();
 
     return 0;
 }

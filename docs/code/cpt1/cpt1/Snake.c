@@ -115,8 +115,6 @@ void snake (void) {
     } while (letter != '\033'); // esc key
     
 Exit:   // instead of ending the process, ask Yes/No and restart new game?
-    position_cursor (10, 10);
-    printf ("GAME OVER");
     getchar ();
 }
 
