@@ -1,8 +1,11 @@
 # C / C++ Programming Class 1
 
+---
+# CPU Architecture and C Language Fundamentals 
+
 ## Objectives
 
-- **Review Von Neumann computer architecture**
+- **Review Von Neumann computer architecture and CPU and computer system standards**
 - **Identify and describe components and operation of a CPU (Central Processing Unit)**
 - **Identify and describe components and operation of an ALU (Arithmetic Logic Unit)**
 - **Identify and use C Language Fundamental Features**
@@ -124,12 +127,12 @@ void, char, int, long, long long, unsigned char, unsigned int, float, double
 ### Functions must start with a letter and can include underbar and numerals.  Functions can return a single result and take multiple parameters of any type:
 ```c
 foo, bar and myFunction   (are sometimes used)
-ComputeAngle, ParseText, ScanString (are much better function names)
+compute_angle, parse_text, scan_string (are much better function names)
 ```
 ### Example function definitions:
 ```c
 void doSomething (void) { ; }
-bool Scan (char text[], char key[] ) { ; }
+bool scan (char text[], char key[] ) { ; }
 ```
 ---
 # Arithmetic Operators
@@ -140,7 +143,7 @@ bool Scan (char text[], char key[] ) { ; }
 and advanced math such as sin, cosine, exponents, square root and others through math library functions:
 
 ```c
-AngleOfServo = sin( NewAngle );
+angleOfServo = sin( newAngle );
 ```
 
 ---
@@ -153,20 +156,20 @@ AngleOfServo = sin( NewAngle );
 ```c
 int this = true;
 int that = true;
-int NotThisAndThat = ! (This && That);
+int notThisAndThat = ! (this && that);
 ```
 # Bitewise Logical Operators
 ### C language includes all common bitwise logical operations on all integer data types:
 ```c
- & | ^ ~  (AND, OR, XOR, NOT)
+ & | ^ ~     // (AND, OR, XOR, NOT)
 ```
 ### and related shift operators:
 ```c
-<< >>  (LEFT SHIFT, RIGHT SHIFT)
+<< >>        //(LEFT SHIFT, RIGHT SHIFT)
 ```
 ```c
-int MyValue = 0b00111110; // 0x3e
-int ShiftAndMask = 0b0111000 & (MyValue << 3);
+int myValue = 0b00111110;   // 0x3e
+int shiftAndMask = 0b0111000 & (myValue << 3);
 ```
 <script src="//repl.it/embed/Iujt/3.js"></script>
 
@@ -179,12 +182,12 @@ int ShiftAndMask = 0b0111000 & (MyValue << 3);
 # Arrays
 ### C language supports extensive array capability:
 ```c
-int Items[] = {5, 3, 11};  (a 3 element array of ints)
+int items[] = {5, 3, 11};  (a 3 element array of ints)
 ```
 ### It is not required to specify the number of elements in brackets but this is often done to ensure correctness:
 ```c
 #define NUM_ELEMENTS 3
-int Items[NUM_ELEMENTS] = {5, 3, 11};
+int items[NUM_ELEMENTS] = {5, 3, 11};
 ```
 
 ---
@@ -194,10 +197,10 @@ int Items[NUM_ELEMENTS] = {5, 3, 11};
 #define GROUPS 2
 #define NUM_ELEMENTS 3
 
-int Items[GROUPS] [NUM_ELEMENTS] =
+int values[GROUPS] [NUM_ELEMENTS] =
 { {5,  3, 11},
   {99, 7, 45} };
-printf(”# at 2,3 = %d\n”, Items[1] [2] );
+printf(”# at 2,3 = %d\n”, values[1] [2] );
 ```
 <script src="//repl.it/embed/IulF/1.js"></script>
 
