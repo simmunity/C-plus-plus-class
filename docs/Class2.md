@@ -167,8 +167,20 @@ fourthLabel:
 # How To Setup The Command Line Terminal App
 ### Xcode programs can be created that do not use a graphical window for user interaction and will use the Terminal application found in the Utilities folder inside the Applications folder.  Due to a problem with permissions in the latest Sierra OS/X version, to have Xcode launch the Terminal application when your program runs you have to make a copy of the application and then rename it to Terminal2.app.  When using the curriculum Xcode projects or your own new command line projects, follow the instructions below in Xcode.  Copy Terminal and rename only once.  The Terminal application is found in the Utilities folder under the Applications folder.
 ### Again, it is best to configure the Terminal2 application to use the Menlo 18pt Regular font and normal background and foreground colors for the numerous terminal programs to work properly for the rest of this class.
-
 ![](images/TerminalUseInstructions.png)
+
+---
+# How To Run and Debug Programs
+### Launch Xcode, then load ***cpt1*** project and configure the terminal as described in the section on setting up the Terminal2 app.  Explore the cpt1 Xcode project main.c file and Arithmetic.c, Strings.c and ControlFlow.c files.  Note that main.c includes function calls several additional projects that we'll be exploring shortly.
+### When Xcode is configured to produce a command line application and the Terminal2 app is setup to launch and interact with your programs process, you can set breakpoints and single step through the program.  The debugger will pause the program execution so you can inspect variables and other program state.  The blue mark on line 20, is a breakpoint.
+### By pressing the right pointing triangle under the word edit in the menu bar, Xcode will compile and run the program.
+![](images/XcodePart1A.png)
+### Because the program is a command line program and not a GUI OS/X application, we have to help Xcode attach its debugger to the running process, which is paused waiting for the user to press the return key.  So before pressing the return key in the Terminal2 application window that popped up once the program began running, selected the Debug menu, then the submenu item Attach To Process, then selecte the top item which is the running program.  Then press return in the program waiting which is waiting for a user keystroke.
+![](images/XcodePart1B.png)
+### Now that the debugger has paused the program, press the down pointing arrow that points to a horizontal bar in the lower debugger bar section.  This button is the single step command that will step into the arithmetic_logic_arrays function and through the set of program statements.
+![](images/XcodePart1C.png)
+### Notice that as the program executes, the printf statements display their answers in the Terminal2 application window.  Also look at the Xcode area at the left and bottom which has various useful info such as the call stack, and variable values.
+![](images/XcodePart1D.png)
 
 ---
 # Using Standard C Libraries
@@ -190,18 +202,6 @@ int getch(void);
 bool get_letter (char * pLetter);
 uint64_t get_time_in_milliseconds_since_boot(void);
 ```
-### Lets play with these in Xcode.  Launch Xcode, then load ***cpt1*** project and configure the terminal as described in the section on setting up the Terminal2 app.  Explore the cpt1 Xcode project main.c file and Arithmetic.c, Strings.c and ControlFlow.c files.  Note that main.c includes function calls several additional projects that we'll be exploring shortly. 
----
-# How To Run and Debug Programs
-### When Xcode is configured to produce a command line application and the Terminal2 app is setup to launch and interact with your programs process, you can set breakpoints and single step through the program.  The debugger will pause the program execution so you can inspect variables and other program state.  The blue mark on line 20, is a breakpoint.
-### By pressing the right pointing triangle under the word edit in the menu bar, Xcode will compile and run the program.
-![](images/XcodePart1A.png)
-### Because the program is a command line program and not a GUI OS/X application, we have to help Xcode attach its debugger to the running process, which is paused waiting for the user to press the return key.  So before pressing the return key in the Terminal2 application window that popped up once the program began running, selected the Debug menu, then the submenu item Attach To Process, then selecte the top item which is the running program.  Then press return in the program waiting which is waiting for a user keystroke.
-![](images/XcodePart1B.png)
-### Now that the debugger has paused the program, press the down pointing arrow that points to a horizontal bar in the lower debugger bar section.  This button is the single step command that will step into the arithmetic_logic_arrays function and through the set of program statements.
-![](images/XcodePart1C.png)
-### Notice that as the program executes, the printf statements display their answers in the Terminal2 application window.  Also look at the Xcode area at the left and bottom which has various useful info such as the call stack, and variable values.
-![](images/XcodePart1D.png)
 
 ---
 # Testing the Terminal, Keyboard and Time Library
