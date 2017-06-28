@@ -129,7 +129,7 @@ To pass this class:
 
 
 ## All Materials 
-
+- C Coding Standards [https://users.ece.cmu.edu/~eno/coding/CCodingStandard.html]()
 - The C Programming Language  [https://en.wikipedia.org/wiki/The_C_Programming_Language]()
 - C++ resource  [https://en.wikibooks.org/wiki/C%2B%2B_Programming]()
 - Online C playground  [https://repl.it/site/languages/c]()
