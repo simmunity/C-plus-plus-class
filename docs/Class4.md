@@ -53,7 +53,10 @@ typedef struct my_stuff_tag {
 ```c
 sMyStuff Dog = {TYPE_ANIMAL, .uMyStuff.sAnimal={"Lab", "Superdog", 20120425, 90, 86} };
 ```
-### Lets play with structures in Xcode using the CProgrammingPt4 project.  Open the Extra.c file and grab the STRUCTURES AND UNIONS section
+
+<script src="//repl.it/embed/JPVR/2.js"></script>
+
+### Lets play with structures in Xcode using the cpt3 project.
 
 ---
 # Dynamic Memory Allocation
@@ -71,8 +74,10 @@ free ( pString );
 ### Malloc() does not clear the contents that were previously stored there.  Calloc() clears all bytes in the allocated array to zero.
 
 ### Heap memory allocation divides the heap into various size chunks. When blocks are freed, they maybe surrounded by allocated blocks leaving holes in the heap too small for other allocations.  This is called fragmentation and can cause a program to run out of RAM.  Some memory allocators attempt to coalesce neighboring free blocks to reduce fragmentation.  Some programs and programming languages actually stop execution and "garbage collect" free blocks and compact the heap back into a contiguous set of blocks with no holes.  This takes time and can cause programs to pause execution.
- 
-### Lets play with dynamic memory allocation in Xcode using the  CProgrammingPt4 project.  Open the Extra.c file and grab the DYNAMIC MEMORY ALLOCATION section
+
+<script src="//repl.it/embed/JPWb/1.js"></script>
+
+### Lets play with dynamic memory allocation in Xcode using the cpt3 project.
 
 ---
 # Advanced Linked and Nested Data Structures
@@ -88,7 +93,10 @@ typedef struct my_stuff_tag {
     } uMyStuff;
 } sMyStuff;
 ```
-### Lets play with these in Xcode using the CProgrammingPt4 project.  Open the Extra.c file and grab the ADVANCED DATA STRUCTURES section
+
+<script src="//repl.it/embed/JPX5/1.js"></script>
+
+### Lets play with these in Xcode using the cpt3 project.
 
 ---
 # Recursion
@@ -104,8 +112,8 @@ void tower_of_hanoi(int limit, char source, char temp, char dest) {
   tower_of_hanoi (limit - 1, temp, source, dest);
 }
 ```
-### The Tower of Hanoi game can be solved using a recursive algorithm.
-### Lets play with this function in Xcode using the CProgrammingPt4 project.  Open the Extra.c file and grab RECURSION section
+
+<script src="//repl.it/embed/JP50/1.js"></script>
 
 ---
 # Threads
@@ -151,6 +159,8 @@ int main(int argc, char *argv[])
    pthread_exit(NULL);
 }
 ```
-### Additional special functions allow processes to be created and even a preferential core speficied on multi-core CPU's (which are now standard).
+
+![](images/ThreadsRun.png)
+### Additional special functions allow processes to be created and even a preferential core specified on multi-core CPU's (which are now standard).
 
 ---
