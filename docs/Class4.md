@@ -75,7 +75,7 @@ free ( pString );
 
 ### Heap memory allocation divides the heap into various size chunks. When blocks are freed, they maybe surrounded by allocated blocks leaving holes in the heap too small for other allocations.  This is called fragmentation and can cause a program to run out of RAM.  Some memory allocators attempt to coalesce neighboring free blocks to reduce fragmentation.  Some programs and programming languages actually stop execution and "garbage collect" free blocks and compact the heap back into a contiguous set of blocks with no holes.  This takes time and can cause programs to pause execution.
 
-<script src="//repl.it/embed/JPWb/1.js"></script>
+<script src="//repl.it/embed/JPWb/3.js"></script>
 
 ### Lets play with dynamic memory allocation in Xcode using the cpt3 project.
 
@@ -94,7 +94,7 @@ typedef struct my_stuff_tag {
 } sMyStuff;
 ```
 
-<script src="//repl.it/embed/JPX5/1.js"></script>
+<script src="//repl.it/embed/JPX5/2.js"></script>
 
 ### Lets play with these in Xcode using the cpt3 project.
 
