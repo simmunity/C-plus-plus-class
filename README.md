@@ -8,7 +8,7 @@ This class is critical for advancing software engineers interested in participat
 
 ## Prerequisites
 
-Light experience using Xcode and Arduino is required.  Familiarity with fundamental programming concepts of variables, data types, loops, conditionals and functions is required.  If unfamiliar with the Xcode or Arduino IDE, following the tutorials and building and then modifying the two projects to do a new function should be adequate proparation:
+Light experience using Xcode and Arduino is required.  Familiarity with fundamental programming concepts of variables, data types, loops, conditionals and functions is required.  If unfamiliar with the Xcode or Arduino IDE, following the tutorials and building and then modifying the two projects to do a new function should be adequate preparation:
 
 Here is the first of a few intro to Xcode console application development in C
 [https://www.youtube.com/watch?v=34shb-jBX9w]() <br>
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[])	// standard OS command line parameter pa
 
 ## Learning Outcomes/Course competencies
 
-Mastery of C programming langauge features:
+Mastery of C programming language features:
 
 - Variables
 - standard data types and casting
