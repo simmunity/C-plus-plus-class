@@ -54,7 +54,7 @@ typedef struct my_stuff_tag {
 sMyStuff Dog = {TYPE_ANIMAL, .uMyStuff.sAnimal={"Lab", "Superdog", 20120425, 90, 86} };
 ```
 
-<script src="//repl.it/embed/JPVR/2.js"></script>
+<script src="//repl.it/embed/JPVR/3.js"></script>
 
 ### Lets play with structures in Xcode using the cpt3 project.
 
@@ -113,7 +113,7 @@ void tower_of_hanoi(int limit, char source, char temp, char dest) {
 }
 ```
 
-<script src="//repl.it/embed/JP50/1.js"></script>
+<script src="//repl.it/embed/JP50/3.js"></script>
 
 ---
 # Threads
