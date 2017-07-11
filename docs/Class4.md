@@ -57,6 +57,10 @@ sMyStuff Dog = {TYPE_ANIMAL, .uMyStuff.sAnimal={"Lab", "Superdog", 20120425, 90,
 <script src="//repl.it/embed/JPVR/3.js"></script>
 
 ### Lets play with structures in Xcode using the cpt3 project.
+- Challenge 1: Add 2 food items using a distinct new TYPE_FOOD object structure added to the union
+- Stretch Challenge 1: Add a function pointer unique to each object type giving each a behavior
+
+Note: attempt the food challenge without help, but if you are stuck, the Xcode project has  the full solution in StructuresAndUnionsFoodChallenge.c so you might peek at that for ideas.
 
 ---
 # Dynamic Memory Allocation
@@ -78,6 +82,9 @@ free ( pString );
 <script src="//repl.it/embed/JPWb/3.js"></script>
 
 ### Lets play with dynamic memory allocation in Xcode using the cpt3 project.
+- Challenge 1:  Create code to remove and free a thing in the list based on matching its type and name
+- Stretch Challenge 1:  Sort the list by name using bubble sort algorithm
+
 
 ---
 # Advanced Linked and Nested Data Structures
@@ -97,6 +104,9 @@ typedef struct my_stuff_tag {
 <script src="//repl.it/embed/JPX5/2.js"></script>
 
 ### Lets play with these in Xcode using the cpt3 project.
+- Challenge 1:  Create code to remove and free a thing in the list based on matching its type and name
+- Challenge 2:  Create code to insert a new item at a specific index in the list
+- Stretch Challenge 1:  Sort by name using bubble sort algorithm only changing doubly linked list pointers
 
 ---
 # Recursion
@@ -114,6 +124,9 @@ void tower_of_hanoi(int limit, char source, char temp, char dest) {
 ```
 
 <script src="//repl.it/embed/JP50/3.js"></script>
+
+### Lets play with these in Xcode using the cpt3 project.
+- Challenge 1:  create animation of towers and disks of increasing size moving between the three towers
 
 ---
 # Threads
